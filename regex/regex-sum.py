@@ -10,17 +10,16 @@ if (len(sys.argv) != 2):
 else:
     digits = []
     infile = open(sys.argv[1])
-    lines = infile.readlines()
-    for line in lines:
+
+    for line in infile.readlines():
         matchObj = re.findall('[0-9]+', line)
         if matchObj:
-            print matchObj
             for nums in matchObj:
                 digits.append(nums)
-    print digits
+
+    infile.close()
     summ = 0
     for nums in digits:
         summ += int(nums)
-        print nums
 
     print summ
