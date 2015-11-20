@@ -17,6 +17,6 @@ for i in range(0, int(count)):
     html = urllib.urlopen(url).read()
     soup = BeautifulSoup(html)
     tags = soup('a')
-    url = tags[int(position)].get('href', None)
+    url = tags[int(position)-1].get('href', None)
 
 print 'Last URL: ', url
