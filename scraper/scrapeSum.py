@@ -15,9 +15,6 @@ summation = 0
 tags = soup('span')
 
 for tag in tags:
-  print 'TAG:', tag
-  print 'Contents:', tag.contents
-  print 'Attrs:', tag.attrs
   summation += int(tag.contents[0])
 
 print summation
